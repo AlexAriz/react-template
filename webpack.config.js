@@ -7,16 +7,21 @@ module.exports = {
     'app': [
       'babel-polyfill',
       'react-hot-loader/patch',
-      './src/index'
+      './src/js/index'
     ]
   },
   output: {
-    path: path.resolve(__dirname, 'public'),
+    path: path.join(__dirname, 'public'),
     filename: 'bundle.js'
   },
   module: {
     rules: [
-      { test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader' }
+      // JS
+      {
+        test: /\.js$/,
+        include: path.join(__dirname, 'src', 'js'),
+        loader: 'babel-loader'
+      },
     ]
   }
 }

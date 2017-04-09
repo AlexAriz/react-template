@@ -22,6 +22,12 @@ module.exports = {
         include: path.join(__dirname, 'src', 'js'),
         loader: 'babel-loader'
       },
+      // SCSS
+      {
+        test: /\.scss$/,
+        include: path.join(__dirname, 'src', 'assets', 'scss'),
+        loader: 'style-loader!css-loader!sass-loader'
+      }
     ]
   }
 }

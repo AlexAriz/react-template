@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --hot --history-api-fallback --open"
+    "dev": "webpack-dev-server --hot --history-api-fallback --open",
+    "lint": "eslint ./src/js/**"
   },
   "keywords": [],
   "author": "",
@@ -20,6 +21,8 @@
     "babel-preset-latest": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "css-loader": "^0.28.0",
+    "eslint": "^3.19.0",
+    "eslint-plugin-react": "^6.10.3",
     "history": "^4.6.1",
     "node-sass": "^4.5.2",
     "react-hot-loader": "^3.0.0-beta.6",

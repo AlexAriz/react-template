@@ -4,21 +4,19 @@ import ReactDOM from 'react-dom';
 import { AppContainer } from 'react-hot-loader';
 
 // Components
-import App from './App';
+import Routes from './Routes';
 
 // Styles
 import css from '../assets/scss/style.scss';
 
 const render = (Component) => {
   ReactDOM.render(
-    <AppContainer>
-      <Component />
-    </AppContainer>,
+    Component,
     document.getElementById('app')
-  )
-}
+  );
+};
 
-render(App)
+render(Routes);
 
 if (module.hot) {
   module.hot.accept('./App', () => { render(App) })

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class Main extends Component {
   render() {
@@ -9,5 +10,9 @@ class Main extends Component {
     );
   }
 }
+
+Main.propTypes = {
+  match: PropTypes.object
+};
 
 export default Main;

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { AppContainer } from 'react-hot-loader';
-
 import { Link } from 'react-router-dom';
 
 class App extends Component {
@@ -19,5 +19,9 @@ class App extends Component {
     );
   }
 }
+
+App.propTypes = {
+  children: PropTypes.object
+};
 
 export default App;

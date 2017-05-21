@@ -1,7 +1,6 @@
 // Packages
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { AppContainer } from 'react-hot-loader';
 
 // Components
 import Routes from './Routes';
@@ -19,5 +18,5 @@ const render = (Component) => {
 render(Routes);
 
 if (module.hot) {
-  module.hot.accept('./App', () => { render(App) })
+  module.hot.accept('./Routes', () => { render(Routes) })
 }

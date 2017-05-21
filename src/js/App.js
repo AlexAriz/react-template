@@ -8,9 +8,9 @@ import {
 
 // Components
 import Home from './components/Home';
-import Child from './components/Child';
+import Test from './components/Test';
 
-const Routes = (
+const App = (
   <Router>
     <div>
       <h1>
@@ -19,15 +19,13 @@ const Routes = (
 
       <Switch>
         <Route exact path='/' component={Home} />  
-        <Route path="/test/:testId" component={Child} />
-        <Route path="/foo/:testId" component={Child} />
+        <Route path="/test/:testId" component={Test} />
         <Route render={() => <p>Not Found</p>} />
       </Switch>
 
-      <Link to="/test/helloWorld">CHILD</Link>
-      <Link to="/foo/bar">CHILD</Link>
+      <Link to="/test/helloWorld">Test</Link>
     </div>
   </Router>
 );
 
-export default Routes;
+export default App;

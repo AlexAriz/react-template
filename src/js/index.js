@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import Routes from './Routes';
+import App from './App';
 
 import '../assets/scss/style.scss';
 
@@ -12,8 +12,8 @@ const render = (Component) => {
   );
 };
 
-render(Routes);
+render(App);
 
 if (module.hot) {
-  module.hot.accept('./Routes', () => { render(Routes); });
+  module.hot.accept('./App', () => { render(App); });
 }

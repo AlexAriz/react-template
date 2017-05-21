@@ -6,8 +6,8 @@ Project structure:
 
 ```
 project
-│   README.md
 │   .babelrc
+│   .eslintrc.json
 |   index.html
 |   package.json
 |   webpack.config.js
@@ -25,9 +25,10 @@ project
     └───js
         |   App.js
         |   index.js
-        |   styles.js
         |
         └───components
+        |      Home.js
+        |      Test.js
         |
         └───utils
 ```

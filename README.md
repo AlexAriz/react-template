@@ -36,8 +36,10 @@ project
 Libraries used:
 
   * React
+  * React Router
   * Babel
   * Webpack
   * SCSS
+  * ESLint
   
 Feel free to clone/download this project as a starting point for any of your own projects.

@@ -2,21 +2,31 @@ import React from 'react';
 import {
   BrowserRouter as Router,
   Route,
-  Switch
+  Switch,
+  Link
 } from 'react-router-dom';
 
 // Components
-import App from './App';
-import Main from './components/Main';
+import Home from './components/Home';
+import Child from './components/Child';
 
 const Routes = (
   <Router>
-    <App>
+    <div>
+      <h1>
+        <Link to="/">Hello World!</Link>
+      </h1>
+
       <Switch>
-        <Route path="/test/:testId" component={Main} />
-        <Route path="/foo/:testId" component={Main} />
+        <Route exact path='/' component={Home} />  
+        <Route path="/test/:testId" component={Child} />
+        <Route path="/foo/:testId" component={Child} />
+        <Route render={() => <p>Not Found</p>} />
       </Switch>
-    </App>
+
+      <Link to="/test/helloWorld">CHILD</Link>
+      <Link to="/foo/bar">CHILD</Link>
+    </div>
   </Router>
 );
 

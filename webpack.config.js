@@ -1,18 +1,15 @@
 const webpack = require('webpack');
 const path = require('path');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   devtool: 'source-map',
   entry: {
     'app': [
-      'babel-polyfill',
+      // 'babel-polyfill',
       'react-hot-loader/patch',
       './src/js/index'
     ]
-  },
-  output: {
-    path: path.join(__dirname, 'public'),
-    filename: 'bundle.js'
   },
   module: {
     rules: [
@@ -29,5 +26,16 @@ module.exports = {
         loader: 'style-loader!css-loader!sass-loader'
       }
     ]
-  }
+  },
+  output: {
+    path: path.join(__dirname, 'public'),
+    filename: 'bundle.js',
+    publicPath: '/'
+  },
+  devServer: {
+    historyApiFallback: true
+  },
+  plugins: [new HtmlWebpackPlugin({
+    template: 'index.html'
+  })]
 }

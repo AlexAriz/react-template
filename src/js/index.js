@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 
 import App from './App';
 
-import '../assets/scss/style.scss';
+import 'assets/scss/style.scss';
 
 const render = (Component) => {
   ReactDOM.render(

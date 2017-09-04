@@ -7,8 +7,8 @@ import {
 } from 'react-router-dom';
 
 // Components
-import Home from './components/Home';
-import Test from './components/Test';
+import Home from 'js/components/Home';
+import Test from 'js/components/Test';
 
 const App = (
   <Router>
@@ -18,7 +18,7 @@ const App = (
       </h1>
 
       <Switch>
-        <Route exact path='/' component={Home} />  
+        <Route exact path='/' component={Home} />
         <Route path="/test/:testId" component={Test} />
         <Route render={() => <p>Not Found</p>} />
       </Switch>

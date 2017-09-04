@@ -1,7 +1,11 @@
 {
   "name": "react-template",
   "version": "1.0.0",
-  "description": "",
+  "description": "Use this project as a quick start for future react projects",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AlexAriz/react-template.git"
+  },
   "main": "index.js",
   "scripts": {
     "dev": "webpack-dev-server --hot --history-api-fallback --open",
@@ -21,6 +25,7 @@
     "babel-preset-latest": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "css-loader": "^0.28.0",
+    "dotenv-webpack": "^1.5.4",
     "eslint": "^3.19.0",
     "eslint-plugin-react": "^6.10.3",
     "history": "^4.6.1",

@@ -1,14 +1,20 @@
-const webpack = require('webpack');
 const path = require('path');
-var HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+// const Dotenv = require('dotenv-webpack');
 
 module.exports = {
   devtool: 'source-map',
   entry: {
     'app': [
-      // 'babel-polyfill',
+      'babel-polyfill',
       'react-hot-loader/patch',
       './src/js/index'
+    ]
+  },
+  resolve: {
+    modules: [
+      'node_modules',
+      path.resolve('./src')
     ]
   },
   module: {
@@ -35,7 +41,14 @@ module.exports = {
   devServer: {
     historyApiFallback: true
   },
-  plugins: [new HtmlWebpackPlugin({
-    template: 'index.html'
-  })]
-}
+  plugins: [
+    // Generate an 'index.html' file with the <script> injected
+    new HtmlWebpackPlugin({
+      template: 'index.html'
+    }),
+    // Allows the use of env files
+    // new Dotenv({
+    //   path: 'route/to/env/file'
+    // })
+  ]
+};

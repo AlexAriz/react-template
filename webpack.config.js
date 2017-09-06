@@ -29,7 +29,7 @@ module.exports = {
       {
         test: /\.scss$/,
         include: path.join(__dirname, 'src', 'assets', 'scss'),
-        loader: 'style-loader!css-loader!sass-loader'
+        loader: 'style-loader!css-loader!postcss-loader!sass-loader'
       }
     ]
   },
